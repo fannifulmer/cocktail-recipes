@@ -1,0 +1,14 @@
+<div class="container">
+    <p>{{cocktail?.strDrink}}</p>
+    <img class="fit-picture" src={{cocktail?.strDrinkThumb}}>
+    <div *ngFor="let ingredient of ingredients">
+        {{ingredient}}
+    </div>
+    <p>{{cocktail?.strInstructions}}</p>
+    <button (click)="getRandomCocktail()">Get a new random cocktail</button>
+
+</div>
+
+<div class="container">
+    <input #cocktailName (keyup.enter)="getCocktailByName(cocktailName.value)" cocktailName.value=''>
+</div>
